@@ -1,7 +1,5 @@
 <template>
   <div class="relative w-fit" >
-    <!-- Tooltip -->
-    <a v-if="show && canHover" v-html="tooltipText" class="tooltip bg-gray-600 text-white px-3 py-1 rounded-lg z-50"></a>
     <!-- Text -->
     <span 
       :class="!field.disableLink && 'link-default'"
@@ -12,6 +10,8 @@
     >
       <span v-html="truncatedText"></span>
     </span>
+    <!-- Tooltip -->
+    <a v-if="show && canHover" v-html="tooltipText" class="tooltip absolute top-full left-0 bg-gray-600 text-white px-3 py-1 rounded-lg z-50"></a>
   </div>
 </template>
 
@@ -77,11 +77,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-.tooltip {
-  position: absolute;
-  bottom: -110%;
-  left: 0;
-}
-</style>
