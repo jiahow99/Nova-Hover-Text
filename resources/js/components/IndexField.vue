@@ -1,7 +1,7 @@
 <template>
   <div class="relative w-fit" >
     <!-- Tooltip -->
-    <a v-if="show && canHover" v-html="tooltipText" class="tooltip bg-gray-600 text-white px-3 py-1 rounded-lg"></a>
+    <a v-if="show && canHover" v-html="tooltipText" class="tooltip bg-gray-600 text-white px-3 py-1 rounded-lg z-50"></a>
     <!-- Text -->
     <span 
       :class="!field.disableLink && 'link-default'"
@@ -31,15 +31,13 @@ export default {
       return this.field.displayedAs || this.field.value
     },
     tooltipText() {
-      const chunksize = 3
+      const chunksize = 4
       const texts = this.fieldValue.split(' ')
       let chunks = []
       for (let i = 0; i < texts.length; i += chunksize) {
         chunks.push(texts.slice(i, i + chunksize).join(' '));
       }
 
-      console.log(chunks);
-      console.log(chunks.join('<br>'));
       return chunks.join('<br>');
     },
     truncatedText() {
@@ -83,7 +81,7 @@ export default {
 <style scoped>
 .tooltip {
   position: absolute;
-  top: -150%;
+  bottom: -110%;
   left: 0;
 }
 </style>
