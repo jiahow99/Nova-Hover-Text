@@ -11,7 +11,7 @@
       <span v-html="truncatedText"></span>
     </span>
     <!-- Tooltip -->
-    <a v-if="show && canHover" v-html="tooltipText" class="tooltip absolute top-full left-0 bg-gray-600 text-white px-3 py-1 rounded-lg z-50"></a>
+    <a v-if="show && canHover" v-html="tooltipText" class="tooltip absolute top-0 -right-full bg-gray-600 text-white px-3 py-1 rounded-lg z-50"></a>
   </div>
 </template>
 
