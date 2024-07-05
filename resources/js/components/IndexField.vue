@@ -38,6 +38,8 @@ export default {
         chunks.push(texts.slice(i, i + chunksize).join(' '));
       }
 
+      console.log(chunks);
+      console.log(chunks.join('<br>'));
       return chunks.join('<br>');
     },
     truncatedText() {
