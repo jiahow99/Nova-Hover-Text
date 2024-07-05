@@ -49,8 +49,8 @@ export default {
         const text = this.fieldValue.split(' ');
 
         if (text.length > 3) {
-          var firstline = text.slice(0, 2).join(' ')
-          var secondline = text.slice(2).join(' ')
+          var firstline = text.slice(0, 3).join(' ')
+          var secondline = text.slice(3).join(' ')
 
           if (secondline.length > 30) {
             secondline = secondline.substring(0, 30) + '...'
