@@ -11,7 +11,7 @@
       <span v-html="truncatedText"></span>
     </span>
     <!-- Tooltip -->
-    <a v-if="show && canHover" v-html="tooltipText" class="tooltip absolute top-0 -right-full bg-gray-600 text-white px-3 py-1 rounded-lg z-50"></a>
+    <a v-if="show && canHover" v-html="tooltipText" class="tooltip absolute top-0 left-3/4 bg-gray-600 text-white px-3 py-1 rounded-lg z-50"></a>
   </div>
 </template>
 
@@ -48,7 +48,7 @@ export default {
       if (this.fieldValue.length > 30) {
         const text = this.fieldValue.split(' ');
 
-        if (text.length > 2) {
+        if (text.length > 3) {
           var firstline = text.slice(0, 2).join(' ')
           var secondline = text.slice(2).join(' ')
 
